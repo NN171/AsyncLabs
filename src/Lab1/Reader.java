@@ -5,22 +5,22 @@ import java.util.concurrent.CountDownLatch;
 
 public class Reader implements Runnable {
 
-    private final CountDownLatch start;
-    private final CountDownLatch cdl;
+//    private final CountDownLatch start;
+//    private final CountDownLatch cdl;
     private final Book book;
+    private final String name;
 
-    public Reader(CountDownLatch start, CountDownLatch cdl, Book book) {
-        this.cdl = cdl;
+    public Reader(Book book, String name) {
+//        this.cdl = cdl;
         this.book = book;
-        this.start = start;
+        this.name = name;
+//        this.start = start;
     }
 
     @Override
     public void run() {
         try {
-            start.await();
             System.out.println(book.read());
-            cdl.countDown();
         } catch (InterruptedException e) {
             System.err.println("Поток читатель: ошибка");
         }

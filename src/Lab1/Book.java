@@ -5,9 +5,11 @@ public class Book {
 	private final StringBuilder content;
 	private int users;
 	private final int amount;
+	private final BookGUI bookGUI;
 
-	public Book(int amount) {
+	public Book(int amount, BookGUI bookGUI) {
 		content = new StringBuilder();
+		this.bookGUI = bookGUI;
 		this.amount = amount;
 	}
 
@@ -39,3 +41,4 @@ public class Book {
 		return content.toString();
 	}
 }
+

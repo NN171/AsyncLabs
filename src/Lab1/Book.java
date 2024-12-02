@@ -19,7 +19,7 @@ public class Book {
 		}
 
 		users++;
-		Thread.sleep(200);
+		Thread.sleep(1000);
 		content.append(note);
 		System.out.println("Запись внесена");
 		users--;
@@ -31,7 +31,7 @@ public class Book {
 			wait();
 		}
 		users++;
-		Thread.sleep(50);
+		Thread.sleep(500);
 		users--;
 		notifyAll();
 		return content.toString();

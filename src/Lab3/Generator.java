@@ -20,7 +20,7 @@ public class Generator {
 
 	public static void main(String[] args) throws IOException {
 		int size = 10;
-		String filePath = "D:/matrix.txt";
+		String filePath = "C:/matrix.txt";
 		generateMatrix(size, filePath);
 		System.out.println("Матрица успешно создана и записана в файл: " + filePath);
 	}

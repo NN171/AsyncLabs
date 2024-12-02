@@ -13,7 +13,7 @@ public class Main {
 			for (int i = 0; i < size; i++) {
 				String line = reader.readLine();
 				if (line != null) {
-					matrix[i] = Arrays.stream(line.trim().split("\\s+"))
+					matrix[i] = Arrays.stream(line.trim().split(" "))
 							.mapToInt(Integer::parseInt)
 							.toArray();
 				}
@@ -23,7 +23,7 @@ public class Main {
 	}
 
 	public static void main(String[] args) throws IOException {
-		String filePath = "D:/matrix.txt";
+		String filePath = "C:/matrix.txt";
 		int size = 10;
 		int[][] matrix = readMatrix(filePath, size);
 

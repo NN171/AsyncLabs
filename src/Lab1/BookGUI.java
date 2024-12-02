@@ -58,11 +58,11 @@ public class BookGUI extends JFrame {
 
     private void startSimulation() {
         for (int i = 0; i < 3; i++) {
-            new Writer(book, "Writer " + i, "New Content " + i, writerProgressBars.get(i)).start();
+//            new Writer(book, "Writer " + i, "New Content " + i, writerProgressBars.get(i)).start();
         }
 
         for (int i = 0; i < 5; i++) {
-            new Reader(book, "Reader " + i, readerProgressBars.get(i)).start();
+//            new Reader(book, "Reader " + i, readerProgressBars.get(i)).start();
         }
     }
 
